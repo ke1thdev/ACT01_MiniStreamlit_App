@@ -18,48 +18,46 @@ st.markdown("""
 
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
-    .main { background: #0f0f1a; }
+    .main { background: #000000; }
 
-    .stApp { background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%); }
+    .stApp { background: #000000; }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
-        border-right: 1px solid #2a2a4a;
+        background: #0a0a0a;
+        border-right: 1px solid #193b68;
     }
 
     /* Cards */
     .sim-card {
-        background: linear-gradient(135deg, #1e1e3a, #252545);
-        border: 1px solid #3a3a6a;
+        background: #0d0d0d;
+        border: 1px solid #193b68;
         border-radius: 16px;
         padding: 20px 24px;
         margin-bottom: 16px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.6);
     }
 
     .sim-title {
         font-size: 1.6rem;
         font-weight: 700;
-        background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #ffffff;
         margin-bottom: 4px;
     }
 
     .sim-subtitle {
-        color: #7070a0;
+        color: #005784;
         font-size: 0.85rem;
         margin-bottom: 16px;
     }
 
     .formula-box {
-        background: #0d0d1f;
-        border: 1px solid #4040a0;
+        background: #000000;
+        border: 1px solid #005784;
         border-radius: 8px;
         padding: 10px 16px;
         font-family: 'Courier New', monospace;
-        color: #a78bfa;
+        color: #ffffff;
         font-size: 1.05rem;
         margin: 8px 0 16px 0;
         text-align: center;
@@ -67,20 +65,20 @@ st.markdown("""
 
     .stat-chip {
         display: inline-block;
-        background: #2a2a5a;
-        border: 1px solid #4040a0;
+        background: #193b68;
+        border: 1px solid #005784;
         border-radius: 20px;
         padding: 4px 14px;
         font-size: 0.78rem;
-        color: #a0a0d0;
+        color: #ffffff;
         margin: 3px;
     }
 
     /* Buttons */
     .stButton > button {
-        background: linear-gradient(135deg, #7c3aed, #3b82f6) !important;
+        background: #005784 !important;
         color: white !important;
-        border: none !important;
+        border: 1px solid #193b68 !important;
         border-radius: 10px !important;
         padding: 10px 28px !important;
         font-weight: 600 !important;
@@ -89,26 +87,27 @@ st.markdown("""
         width: 100%;
     }
     .stButton > button:hover {
+        background: #193b68 !important;
         transform: translateY(-1px);
-        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4) !important;
+        box-shadow: 0 6px 20px rgba(0, 87, 132, 0.4) !important;
     }
 
     /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
-        background: #1a1a2e;
+        background: #0a0a0a;
         border-radius: 12px;
         padding: 4px;
         gap: 4px;
     }
     .stTabs [data-baseweb="tab"] {
         background: transparent;
-        color: #7070a0;
+        color: #005784;
         border-radius: 8px;
         font-weight: 600;
         padding: 8px 20px;
     }
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #7c3aed, #3b82f6) !important;
+        background: #193b68 !important;
         color: white !important;
     }
 
@@ -117,42 +116,42 @@ st.markdown("""
 
     /* Number inputs */
     .stNumberInput input {
-        background: #1a1a2e !important;
-        color: #e0e0ff !important;
-        border: 1px solid #3a3a6a !important;
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        border: 1px solid #193b68 !important;
         border-radius: 8px !important;
     }
 
     /* Select */
     .stSelectbox select, .stSelectbox > div > div {
-        background: #1a1a2e !important;
-        color: #e0e0ff !important;
+        background: #0a0a0a !important;
+        color: #ffffff !important;
     }
 
-    h1, h2, h3, h4 { color: #e0e0ff !important; }
-    p, label, .stMarkdown { color: #b0b0d0 !important; }
+    h1, h2, h3, h4 { color: #ffffff !important; }
+    p, label, .stMarkdown { color: #ffffff !important; }
 
-    hr { border-color: #2a2a4a !important; }
+    hr { border-color: #193b68 !important; }
 </style>
 """, unsafe_allow_html=True)
 
 # ─── Matplotlib dark theme ───────────────────────────────────────────────────
 plt.rcParams.update({
-    "figure.facecolor": "#12122a",
-    "axes.facecolor":   "#1a1a36",
-    "axes.edgecolor":   "#3a3a6a",
-    "axes.labelcolor":  "#a0a0d0",
-    "axes.titlecolor":  "#c0c0f0",
-    "xtick.color":      "#7070a0",
-    "ytick.color":      "#7070a0",
-    "grid.color":       "#2a2a4a",
+    "figure.facecolor": "#000000",
+    "axes.facecolor":   "#0a0a0a",
+    "axes.edgecolor":   "#193b68",
+    "axes.labelcolor":  "#ffffff",
+    "axes.titlecolor":  "#ffffff",
+    "xtick.color":      "#ffffff",
+    "ytick.color":      "#ffffff",
+    "grid.color":       "#193b68",
     "grid.linewidth":   0.8,
-    "text.color":       "#c0c0f0",
-    "legend.facecolor": "#12122a",
-    "legend.edgecolor": "#3a3a6a",
+    "text.color":       "#ffffff",
+    "legend.facecolor": "#000000",
+    "legend.edgecolor": "#005784",
 })
 
-ACCENT_COLORS = ["#a78bfa", "#60a5fa", "#34d399", "#f97316", "#f43f5e", "#facc15"]
+ACCENT_COLORS = ["#ffffff", "#005784", "#193b68", "#ffffff", "#005784", "#193b68"]
 
 def styled_fig(figsize=(10, 5)):
     fig, ax = plt.subplots(figsize=figsize)
@@ -171,8 +170,8 @@ def finalize(ax, xlabel="x", ylabel="y", title=""):
 # SIDEBAR
 # ════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown('<div class="sim-title" style="font-size:1.3rem">📈 Graph Simulator</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sim-subtitle">Interactive Mathematical Visualizations</div>', unsafe_allow_html=True)
+    st.markdown('<div style="font-size:1.3rem; font-weight:700; color:#ffffff">📈 Graph Simulator</div>', unsafe_allow_html=True)
+    st.markdown('<div style="color:#005784; font-size:0.85rem">Interactive Mathematical Visualizations</div>', unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("### 🧩 Functions")
     funcs = [
@@ -191,8 +190,8 @@ with st.sidebar:
 # ════════════════════════════════════════════════════════════════════════════
 # HEADER
 # ════════════════════════════════════════════════════════════════════════════
-st.markdown('<h1 class="sim-title" style="font-size:2.2rem; text-align:center">📈 Graph Simulator</h1>', unsafe_allow_html=True)
-st.markdown('<p style="text-align:center; color:#7070a0; margin-bottom:24px">Explore · Compute · Visualize</p>', unsafe_allow_html=True)
+st.markdown('<h1 style="font-size:2.2rem; text-align:center; color:#ffffff; font-weight:700">📈 Graph Simulator</h1>', unsafe_allow_html=True)
+st.markdown('<p style="text-align:center; color:#005784; margin-bottom:24px">Explore · Compute · Visualize</p>', unsafe_allow_html=True)
 
 tabs = st.tabs([
     "📏 Linear & Quadratic",
@@ -233,9 +232,8 @@ with tabs[0]:
         if "Linear" in mode:
             y = m * x + b
             ax.plot(x, y, color=ACCENT_COLORS[0], lw=2.5, label=formula)
-            ax.axhline(0, color="#444466", lw=0.8)
-            ax.axvline(0, color="#444466", lw=0.8)
-            x_int = -b / m if m != 0 else None
+            ax.axhline(0, color="#193b68", lw=0.8)
+            ax.axvline(0, color="#193b68", lw=0.8)
             if x_int is not None:
                 ax.scatter([x_int], [0], color=ACCENT_COLORS[2], s=80, zorder=5,
                            label=f"x-intercept: ({x_int:.2f}, 0)")
@@ -246,8 +244,8 @@ with tabs[0]:
         else:
             y = a * x**2 + b * x + c
             ax.plot(x, y, color=ACCENT_COLORS[1], lw=2.5, label=formula)
-            ax.axhline(0, color="#444466", lw=0.8)
-            ax.axvline(0, color="#444466", lw=0.8)
+            ax.axhline(0, color="#193b68", lw=0.8)
+            ax.axvline(0, color="#193b68", lw=0.8)
             disc = b**2 - 4*a*c
             vertex_x = -b / (2*a) if a != 0 else 0
             vertex_y = a * vertex_x**2 + b * vertex_x + c
@@ -297,7 +295,7 @@ with tabs[1]:
                 y = np.where(np.abs(y) > 10, np.nan, y)
             ax.plot(x, y, color=ACCENT_COLORS[i], lw=2.2,
                     label=f"y = {A}·{fn}({B}x + {C:.2f}) + {D}")
-        ax.axhline(0, color="#444466", lw=0.8)
+        ax.axhline(0, color="#193b68", lw=0.8)
         xticks = np.arange(0, cycles * 2 * np.pi + 0.1, np.pi / 2)
         ax.set_xticks(xticks)
         ax.set_xticklabels([f"{v/np.pi:.1f}π" for v in xticks])
@@ -352,8 +350,8 @@ with tabs[2]:
             y = ea * np.log10(eb * xp)
             ax.plot(xp, y, color=ACCENT_COLORS[ci], lw=2.2, label=f"y = {ea}·log₁₀({eb}x)")
             ci += 1
-        ax.axhline(0, color="#444466", lw=0.8)
-        ax.axvline(0, color="#444466", lw=0.8)
+        ax.axhline(0, color="#193b68", lw=0.8)
+        ax.axvline(0, color="#193b68", lw=0.8)
         ax.set_ylim(-15, 30)
         finalize(ax, title="Exponential & Logarithmic Functions")
         st.pyplot(fig, use_container_width=True)
@@ -376,7 +374,7 @@ with tabs[3]:
             "Hypotrochoid",
             "Epicycloid",
         ])
-        color_mode = st.selectbox("Color", ["Gradient (t)", "Solid violet", "Solid cyan"])
+        color_mode = st.selectbox("Color", ["White", "Blue (#005784)", "Navy (#193b68)"])
     with col2:
         if curve_type == "Lissajous Figure":
             pa = st.slider("Freq x (a)", 1, 8, 3)
@@ -429,17 +427,9 @@ with tabs[3]:
             y = (p_R2 + p_r2) * np.sin(t2) - p_r2 * np.sin((p_R2 + p_r2) / p_r2 * t2)
             label = f"Epicycloid R={p_R2}, r={p_r2}"
 
-        if color_mode == "Gradient (t)":
-            from matplotlib.collections import LineCollection
-            points = np.array([x, y]).T.reshape(-1, 1, 2)
-            segments = np.concatenate([points[:-1], points[1:]], axis=1)
-            lc = LineCollection(segments, cmap="cool", linewidth=1.8, alpha=0.9)
-            lc.set_array(np.linspace(0, 1, len(x)))
-            ax.add_collection(lc)
-            ax.autoscale()
-        else:
-            clr = ACCENT_COLORS[0] if "violet" in color_mode else ACCENT_COLORS[1]
-            ax.plot(x, y, color=clr, lw=1.8, alpha=0.9, label=label)
+        color_map = {"White": "#ffffff", "Blue (#005784)": "#005784", "Navy (#193b68)": "#193b68"}
+        clr = color_map[color_mode]
+        ax.plot(x, y, color=clr, lw=1.8, alpha=0.9, label=label)
 
         ax.set_title(label, fontsize=12, fontweight="bold", pad=10)
         ax.spines[["top", "right", "left", "bottom"]].set_visible(False)
@@ -487,8 +477,8 @@ with tabs[4]:
                 ax.fill_between(x_shade, y_shade, alpha=0.35, color=ACCENT_COLORS[i])
                 prob = norm.cdf(hi, m_, s_) - norm.cdf(lo, m_, s_)
                 ax.annotate(f"P({lo}≤X≤{hi}) = {prob:.4f}", xy=((lo+hi)/2, max(y_shade)/2),
-                            ha="center", fontsize=10, color="#e0e0ff",
-                            bbox=dict(boxstyle="round,pad=0.4", fc="#2a2a5a", ec="#5050a0", alpha=0.9))
+                            ha="center", fontsize=10, color="#ffffff",
+                            bbox=dict(boxstyle="round,pad=0.4", fc="#193b68", ec="#005784", alpha=0.9))
             # mark σ bands
             for k, alpha_ in [(1, 0.15), (2, 0.08), (3, 0.04)]:
                 ax.axvspan(m_ - k*s_, m_ + k*s_, alpha=alpha_, color=ACCENT_COLORS[i])
@@ -536,8 +526,8 @@ with tabs[5]:
 
         fig, ax = styled_fig()
         ax.plot(x, y_clipped, color=ACCENT_COLORS[0], lw=2.5, label=str(p))
-        ax.axhline(0, color="#555580", lw=1.2, linestyle="--")
-        ax.axvline(0, color="#555580", lw=1.2, linestyle="--")
+        ax.axhline(0, color="#193b68", lw=1.2, linestyle="--")
+        ax.axvline(0, color="#193b68", lw=1.2, linestyle="--")
 
         for rx in real_roots:
             if pr_range[0] <= rx <= pr_range[1]:
