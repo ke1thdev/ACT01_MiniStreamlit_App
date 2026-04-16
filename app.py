@@ -231,6 +231,8 @@ with tabs[0]:
         fig, ax = styled_fig()
         if "Linear" in mode:
             y = m * x + b
+            # Calculate x-intercept if slope is not zero
+            x_int = -b / m if m != 0 else None
             ax.plot(x, y, color=ACCENT_COLORS[0], lw=2.5, label=formula)
             ax.axhline(0, color="#193b68", lw=0.8)
             ax.axvline(0, color="#193b68", lw=0.8)
